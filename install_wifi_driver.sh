@@ -1,14 +1,12 @@
 #!/bin/bash
-
 # Check for sudo privileges
 if [ "$EUID" -ne 0 ]; then
   echo "Please run this script with sudo privileges."
   exit 1
 fi
-
 # Function to display progress
 function display_progress {
-  echo -ne "$1...\r"
+  echo -ne "$1..."
 }
 
 # Update and install necessary packages
@@ -24,7 +22,7 @@ mkdir -p $TEMP_DIR
 cd $TEMP_DIR
 
 # GitHub repository URL
-REPO_URL="https://github.com/Nevergiveup11837/mt7902driverforlinux/raw/main"
+REPO_URL="https://github.com/Egide-C/MT7902/raw/main"
 
 # List of files to download
 FILES=(
